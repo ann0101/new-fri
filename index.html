@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/06199d2b26.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
     <title>FRI</title>
 </head>
 <body>
     <header>
         <nav>
-            <img src="img/logoFRI.png" alt="Лого ФРІ">
-            <ul>
+            <div class="mobile-menu">
+            <
+                <img class="header-logoFRI" src="img/logoFRI.png" alt="Лого ФРІ">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <ul id="menu">
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="#">Всеукраїнські проекти</a></li>
                 <li><a href="#">Осередки ФРІ</a></li>
@@ -18,12 +26,14 @@
                 <li><a href="#">Блог</a> </li>
                 <li> <a href="#">Контакти</a></li>
             </ul>
-            <form>
-            <input type="text" placeholder="Search...">
-            <!--іконка-->
-            <input type="submit" value="Вхід">
+            <form class="header-search-login">
+                <i class="fas fa-search">
+                    <input type="text" placeholder="Search...">
+                </i>
+                <i class="far fa-user"></i>
+                <button class="button login">Вхід</button>
             </form>
-            </nav>
+        </nav>
         <div class="banner">
             <h1>Зміни починаються з тебе</h1>
             <p>ФРІ – потужний центр підтримки молодіжного руху, молодіжних організацій та підготовки молодих лідерів в Україні.
@@ -31,6 +41,18 @@
             розвитку студентських та загалом молодіжних ініціатив.</p>
         </div>
     </header>
+
+    <script>
+        function myFunction() {
+        var x = document.getElementById("menu");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+        }
+    </script>
+
 
     <article class="generated-data-list">
         <h2><span class="mark">ФРІ </span>— це...</h2>
@@ -50,90 +72,97 @@
                 <p>40</p>
                 <p>осередків в Україні</p>
             </div>
-        </article>
-        <article>
-            <h2><span class="mark">Новини </span></h2>
-            <section class="news-list">
-                <div class="news-block">
-                    <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
-                    <h4>5 інсайдів із ФРІ-табору «Soft skills»</h4>
-                    <p>23-27 липня молодь з усієї України (і навіть з Білорусі) приїхала на Волинь,
-                    щоб взяти участь у освітньо-мотиваційному таборі.</p>
-                </div>
-                <div class="news-block">
-                    <img src="img/news/softcamp.jpg" alt="Ватра на Soft Skills Camp">
-                    <h4>Тренування м'яких навичок у жорстких умовах...</h4>
-                    <p>ФРІ-табір «Soft Skills Camp» на Волині організувала команда луцького осередку
-                    ФРІ (ФРІ Луцьк). Уляна Кашепа – голова ФРІ Луцьк – координувала подію.</p>
-                </div>
-                <div class="news-block">
-                    <img src="img/news/tvoja-krajina-in-Dnipro.jpg" alt="Твоя країна в Дніпрі">
-                    <h4>«Твоя країна» у Дніпрі: відбувся ювілейний десятий візит</h4>
-                    <p>Минулих вихідних в Україні стало на цілих 9 людей більше,
-                    які побували у Дніпрі і встигли його полюбити! 9 хлопців та</p>
-                </div>
-            </section>
-            <section class="all-news">
+    </article>
+
+    <article class="news">
+        <h2><span class="mark">Новини </span></h2>
+        <div class="news-list">
+            <div class="news-block">
+                <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
+                <h4>5 інсайдів із ФРІ-табору «Soft skills»</h4>
+                <p>23-27 липня молодь з усієї України (і навіть з Білорусі) приїхала на Волинь,
+                щоб взяти участь у освітньо-мотиваційному таборі.</p>
+            </div>
+            <div class="news-block">
+                <img src="img/news/softcamp.jpg" alt="Ватра на Soft Skills Camp">
+                <h4>Тренування м'яких навичок у жорстких умовах...</h4>
+                <p>ФРІ-табір «Soft Skills Camp» на Волині організувала команда луцького осередку
+                ФРІ (ФРІ Луцьк). Уляна Кашепа – голова ФРІ Луцьк – координувала подію.</p>
+            </div>
+            <div class="news-block">
+                <img src="img/news/tvoja-krajina-in-Dnipro.jpg" alt="Твоя країна в Дніпрі">
+                <h4>«Твоя країна» у Дніпрі: відбувся ювілейний десятий візит</h4>
+                <p>Минулих вихідних в Україні стало на цілих 9 людей більше,
+                які побували у Дніпрі і встигли його полюбити! 9 хлопців та</p>
+            </div>
+        </div>
+        <div class="all-news">
+             <a href="#">
                 <p>Всі новини</p>
-                <!--іконка-->
-                <a href="#" class="#"></a>
-            </section>
-        </article>
-        <article>
-            <h2><span class="mark">Підтримай </span>нас</h2>
-            <p>Всеукраїнська молодіжна громадська організація “Фундація Регіональних Ініціатив” (ФРІ) – потужний
-            центр підтримки молодіжного руху, молодіжних організацій та підготовки молодих лідерів в Україні.
-            Діємо з метою зміцнення молодіжного руху, навчання і забезпечення активних учасників об’єднань молоді,
-            розвитку студентських та загалом молодіжних ініціатив.</p>
-            <table>
-                <div class="">
-                    <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
-                    <h4><mark>ФРІ-табір «Крок до Лідерства» </mark></h4>
-                    <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
-                    Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
-                    <input type="submit" value="Підтримати проект">
-                </tr>
-                <tr>
-                    <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
-                    <h4><mark>ФРІ-табір «Крок до Лідерства» </mark></h4>
-                    <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
-                    Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
-                    <input type="submit" value="Підтримати проект">
-                </tr>
-                <tr>
-                    <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
-                    <h4><mark>ФРІ-табір «Крок до Лідерства» </mark></h4>
-                    <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
-                    Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
-                    <input type="submit" value="Підтримати проект">
-                </tr>
-            </table>
-            <section>
-                <p>ВСІ ПРОЕКТИ</p>
-                <a href="#" class="#"></a>
-            </section>
-        </article>
-        <article>
-            <h2><mark>Підписатись </mark>на новини</h2>
-            <section>
-            <p>Підпишись на нас, щоб завжди бути в курсі найсвіжіших новин та найкращих можливостей</p>
-            <label for="email">Email</label>
-                <input type="email" placeholder="Email" id="email" name="email" required><br>
-                <input type="submit">
-            </section>
-        </article>
+                <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </article>
+
+    <article>
+        <h2><span class="mark">Підтримай </span>нас</h2>
+        <p>Всеукраїнська молодіжна громадська організація “Фундація Регіональних Ініціатив” (ФРІ) – потужний
+        центр підтримки молодіжного руху, молодіжних організацій та підготовки молодих лідерів в Україні.
+        Діємо з метою зміцнення молодіжного руху, навчання і забезпечення активних учасників об’єднань молоді,
+        розвитку студентських та загалом молодіжних ініціатив.</p>
+        <div class="suport-projects-list">
+            <div class="suport-project">
+                <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
+                <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
+                <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
+                Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
+                <button class="button suport-project">Підтримати проект</button>
+            </div>
+            <div class="suport-project">
+                <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
+                <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
+                <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
+                Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
+                <button class="button suport-project">Підтримати проект</button>
+            </div>
+            <div class="suport-project">
+                <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
+                <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
+                <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
+                Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
+                <button class="button suport-project">Підтримати проект</button>
+            </div>
+        </div>
+        <div class="all-projects">
+            <a href="#">
+                <p>Всі проекти</p>
+                <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </article>
+
+    <article>
+        <h2><span class="mark">Підписатись </span>на новини</h2>
+        <div>
+            <label for="email">
+                Підпишись на нас, щоб завжди бути в курсі найсвіжіших новин та найкращих можливостей
+            </label>
+            <input type="email" placeholder="Email" id="email" name="email" required><br>
+            <button class="button send">Надіслати</button>
+        </div>
+    </article>
 
     <footer>
-        <article>
-            <p>ТЕЛЕФОН</p>
+        <div class="contacts">
+            <p>Телефон</p>
             <p>+380 93 749 0535</p>
-            <p>EMAIL</p>
+            <p>Email</p>
             <p>head@fri.com.ua</p>
-        </article>
-        <aside>
+        </div>
+        <div class="footer logo">
         <img src="img/logoFRI.png" alt="logo FRI">
            <p>© ФРІ, 2019</p>
-        </aside>
+        </div>
     </footer>
 </body>
 </html>

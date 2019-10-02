@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+:root{
+    --accent-color: #793cab;
+    --main-color:#4b2686;
+    --text-color: white;
+    /*#512a90*/
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-image: url(../img/fri-lider-2017.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+img.header-logoFRI{
+    display: block;
+    margin: 3px;
+}
+
+header nav .mobile-menu a.icon i.fa{
+    font-size: 50px;
+    color: var(--main-color);
+    align-items: baseline;
+    margin: auto;
+    display: block;
+}
+
+nav .mobile-menu a.icon i.fa:hover{
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+header nav .mobile-menu{
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+#menu {
+    color: var(--text-color);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  
+}
+
+#menu, nav form.header-search-login  {
+    display: none;
+ }
+

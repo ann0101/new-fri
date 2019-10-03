@@ -21,7 +21,8 @@ header {
     min-height: 320px;
     display:flex;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+    justify-content: space-between;
     color: var(--text-color);
 }
 

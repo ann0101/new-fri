@@ -13,7 +13,12 @@
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    max-width: 1200px;
+    max-width:1200px;
+}
+
+span.mark {
+    background: var(--yellow-color);
+    width: 100%;
 }
 
 header {
@@ -41,7 +46,7 @@ header {
     position: absolute;
     display: block;
 }
-
+/*Generated data*/
 article.generated-data-list{
     position: relative;
     display: flex;
@@ -81,6 +86,8 @@ article.generated-data-list p.generated-item{
         padding: 10px;
     }
 }
+
+/*News*/
 article.news {
     background-color: #ebebeb;
     margin: 0;
@@ -92,7 +99,7 @@ article.news {
     background-size: 100%;
 }
 
-article.news h2, article.news, article.donate-projects {
+article.news h2, article.news {
     margin: 20px;
     margin-bottom: 15px;
     padding: 0;
@@ -109,8 +116,8 @@ article.news .all-news a {
     text-decoration: none;
     font-size: 24px;
     color: var(--main-color);
-   justify-content: flex-end;
-   margin-right: 10px;
+    justify-content: flex-end;
+    margin-right: 10px;
 }
 
 .all-news p:hover {
@@ -143,16 +150,109 @@ article.news .all-news a {
     }
 }
 
+/*Donate*/
 article.donate-projects {
-    background: url(../img/fri-lider-2017.jpg);
-    background-size: cover;
+    background: url(../img/art-blueprint-brainstorming.jpg);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    flex-direction: column;
+    color: var(--text-color);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
-span.mark {
-    background: var(--yellow-color);
-    width: 100%;
+article.donate-projects .all-projects a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--text-color);
+    justify-content: flex-end;
+    margin-right: 10px;
 }
+.all-projects p:hover {
+    color: var(--main-color);
+    background-color: var(--yellow-color);
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.5s;
+    background-color: transparent;
+}
+
+.button:hover {
+    color: var(--yellow-color);
+    background-color: var(--main-color);
+    cursor: pointer;
+     border: 0.1em solid var(--yellow-color)
+}
+
+@media all and (max-width:30em) {
+    .button {
+        margin: 0.4em auto;
+    }
+}
+
+/*Follow*/
+article.follow-us {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    flex-direction: column;
+    color: var(--text-color);
+    background-size: 100%;
+}
+
+input[type=email] {
+  width: 50%;
+  box-sizing: border-box;
+  border: 8px solid var(--main-color);
+  border-radius: 2px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  align-self: center;
+}
+
+button.send {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+h4 {
+    color: var(--main-color);
+}
+
+.donate-projects h2 span.mark, .follow-us h2 span.mark {
+    color: var(--var-color);
+}
+
+/*Contacts*/

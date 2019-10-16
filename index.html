@@ -35,7 +35,7 @@
         </nav>
         -->
         <div class="sides">
-            <a href="javascript:void(0);" class="menu" onclick="myFunction()">
+            <a href="javascript:void(0);" class="menu" onclick="myFunctionMenu()">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </a>
         </div>
@@ -52,96 +52,91 @@
         </div>
     </header>
 
-    <script>
-        function myFunction() {
-        var x = document.getElementById("menu");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
-        }
-    </script>
-
-
     <article class="generated-data-list">
-        <h2><span class="mark"> ФРІ  </span>— це...</h2>
-            <div class="generated-data">
-                <p class="generated-number">40</p>
-                <p class="generated-item">реалізованих проектів на рік</p>
+        <h2><span class="mark" id="friNumbers"> ФРІ  </span>— це...</h2>
+            <div class="generated-data realised-projects">
+                <p class="generated-number realised-projects">40</p>
+                <p class="generated-item realised-projects">реалізованих проектів на рік</p>
             </div>
-            <div class="generated-data">
-                <p class="generated-number">700</p>
-                <p class="generated-item">нових кандидатів</p>
+            <div class="generated-data new-candidates">
+                <p class="generated-number new-candidates">700</p>
+                <p class="generated-item new-candidates">нових кандидатів</p>
             </div>
-            <div class="generated-data">
-                <p class="generated-number">700</p>
-                <p class="generated-item">членів організації</p>
+            <div class="generated-data members">
+                <p class="generated-number members">700</p>
+                <p class="generated-item members">членів організації</p>
             </div>
-             <div class="generated-data">
-                <p class="generated-number">40</p>
-                <p class="generated-item">осередків в Україні</p>
+             <div class="generated-data branches">
+                <p class="generated-number branches">40</p>
+                <p class="generated-item branches">осередків в Україні</p>
             </div>
     </article>
 
     <article class="news">
         <h2><span class="mark">Новини </span></h2>
         <div class="news-list">
-            <div class="news-block">
+            <article class="news-block">
                 <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
                 <h4>5 інсайдів із ФРІ-табору «Soft skills»</h4>
                 <p>23-27 липня молодь з усієї України (і навіть з Білорусі) приїхала на Волинь,
                 щоб взяти участь у освітньо-мотиваційному таборі.</p>
-            </div>
-            <div class="news-block">
+            </article>
+            <article class="news-block">
                 <img src="img/news/softcamp.jpg" alt="Ватра на Soft Skills Camp">
                 <h4>Тренування м'яких навичок у жорстких умовах...</h4>
                 <p>ФРІ-табір «Soft Skills Camp» на Волині організувала команда луцького осередку
                 ФРІ (ФРІ Луцьк). Уляна Кашепа – голова ФРІ Луцьк – координувала подію.</p>
-            </div>
-            <div class="news-block">
+            </article>
+            <article class="news-block">
                 <img src="img/news/tvoja-krajina-in-Dnipro.jpg" alt="Твоя країна в Дніпрі">
                 <h4>«Твоя країна» у Дніпрі: відбувся ювілейний десятий візит</h4>
                 <p>Минулих вихідних в Україні стало на цілих 9 людей більше,
                 які побували у Дніпрі і встигли його полюбити! 9 хлопців та</p>
-            </div>
+            </article>
+            <article class="news-block">
+                <img src="img/news/tvoja-krajina-in-Dnipro.jpg" alt="Твоя країна в Дніпрі">
+                <h4>«Твоя країна» у Дніпрі: відбувся ювілейний десятий візит</h4>
+                <p>Минулих вихідних в Україні стало на цілих 9 людей більше,
+                які побували у Дніпрі і встигли його полюбити! 9 хлопців та</p>
+            </article>
         </div>
         <div class="all-news">
              <a href="#">
-                <p>Всі новини</p>
+                <p>Всі новини
                 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+                </p>
             </a>
         </div>
     </article>
 
-    <article>
+    <article class="donate-projects">
         <h2><span class="mark">Підтримай </span>нас</h2>
         <p>Всеукраїнська молодіжна громадська організація “Фундація Регіональних Ініціатив” (ФРІ) – потужний
         центр підтримки молодіжного руху, молодіжних організацій та підготовки молодих лідерів в Україні.
         Діємо з метою зміцнення молодіжного руху, навчання і забезпечення активних учасників об’єднань молоді,
         розвитку студентських та загалом молодіжних ініціатив.</p>
         <div class="suport-projects-list">
-            <div class="suport-project">
+            <article class="suport-project">
                 <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
                 <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
                 <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
                 Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
                 <button class="button suport-project">Підтримати проект</button>
-            </div>
-            <div class="suport-project">
+            </article>
+            <article class="suport-project">
                 <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
                 <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
                 <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
                 Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
                 <button class="button suport-project">Підтримати проект</button>
-            </div>
-            <div class="suport-project">
+            </article>
+            <article class="suport-project">
                 <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
                 <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
                 <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
                 Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
                 <button class="button suport-project">Підтримати проект</button>
-            </div>
+            </article>
         </div>
         <div class="all-projects">
             <a href="#">
@@ -174,5 +169,6 @@
            <p>© ФРІ, 2019</p>
         </div>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

@@ -33,11 +33,16 @@ header {
     z-index:-2;
 }
 
-.sides {
-text-decoration: none;
+.sides .fa{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 50px;
+    margin: auto;
+    position: absolute;
+    display: block;
 }
 
-article.generated-data-list, article.news{
+article.generated-data-list{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -57,6 +62,97 @@ article.generated-data-list p.generated-number{
     font-size: 70px;
     margin: 0;
 }
+article.generated-data-list p.generated-item{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+}
+
+
+@media (min-width: 750px){
+    #friNumber {
+        grid-area: myHeader;
+    }
+
+    article.generated-data-list{
+        display: grid;
+        grid-template-areas: 'myHeader myHeader myHeader myHeader myHeader';
+        grid-gap: 20px;
+        padding: 10px;
+    }
+}
+article.news {
+    background-color: #ebebeb;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: var(--main-color);
+    background-size: 100%;
+}
+
+article.news h2, article.news, article.donate-projects {
+    margin: 20px;
+    margin-bottom: 15px;
+    padding: 0;
+    align-items: flex-start;
+}
+
+
+article.news-block img, article.suport-projects img {
+    display: block;
+    width: 100%;
+}
+
+article.news .all-news a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--main-color);
+   justify-content: flex-end;
+   margin-right: 10px;
+}
+
+.all-news p:hover {
+    color: var(--main-color);
+    background-color: var(--yellow-color);
+    cursor: pointer;
+}
+@media(min-width: 640px){
+    .news-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+    .suport-projects-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+}
+
+@media(min-width: 980px){
+    .news-list{
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        grid-gap: 10px;
+    }
+     .suport-projects-list{
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        grid-gap: 20px;
+    }
+}
+
+article.donate-projects {
+    background: url(../img/fri-lider-2017.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
 span.mark {
     background: var(--yellow-color);
+    width: 100%;
 }

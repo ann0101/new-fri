@@ -11,9 +11,9 @@
 }
 
 body {
-    margin: 0;
     font-family: 'Raleway', sans-serif;
-    max-width:1200px;
+    max-width: 980px;
+    margin: auto;
 }
 
 span.mark {
@@ -49,10 +49,10 @@ header {
 /*Generated data*/
 article.generated-data-list{
     position: relative;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
     color: var(--main-color);
     background-size: 100%;
     margin: 0;
@@ -60,6 +60,12 @@ article.generated-data-list{
 }
 h2 {
     font-size: 35px;
+}
+h2.friNumbers{
+    text-align: center;
+}
+.data-list {
+    display: grid;
 }
 
 article.generated-data-list p.generated-number{
@@ -75,16 +81,26 @@ article.generated-data-list p.generated-item{
 
 
 @media (min-width: 750px){
-    #friNumber {
-        grid-area: myHeader;
+    .data-list{
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 2fr);
+        grid-template-areas:
+        'realised-projects new-candidates members branches';
+
     }
 
-    article.generated-data-list{
-        display: grid;
-        grid-template-areas: 'myHeader myHeader myHeader myHeader myHeader';
-        grid-gap: 20px;
-        padding: 10px;
+    .generated-data .realised-projects{
+    grid-area: 'realised-projects';
     }
+    .generated-data .new-candidates{
+        grid-area: 'new-candidates';
+    }
+    .generated-data .members{
+        grid-area: 'members';
+    }
+    .generated-data .branches{
+        grid-area: 'branches';
+
 }
 
 /*News*/

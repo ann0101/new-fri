@@ -160,19 +160,26 @@ article.news .all-news a {
         grid-template-columns: 2fr 2fr 2fr 2fr;
         grid-gap: 10px;
     }
-     .suport-projects-list{
+    .suport-projects-list{
         grid-template-columns: 2fr 2fr 2fr 2fr;
         grid-gap: 20px;
     }
+
+    .all-news{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
 }
 
-/*Donate*/
+/*Donate desktop*/
 article.donate-projects {
     background: url(../img/art-blueprint-brainstorming.jpg);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
+    align-items: baseline;
+    /*align-content: flex-start;*/
     margin: 0;
     padding: 0;
     position: relative;
@@ -182,12 +189,18 @@ article.donate-projects {
     background-repeat: no-repeat;
 }
 
-article.donate-projects .all-projects a {
+article.suport-project img {
+    width: 100%;
+}
+
+.all-projects a {
+    display: flex;
+    justify-content: flex-end;
     text-decoration: none;
     font-size: 24px;
     color: var(--text-color);
-    justify-content: flex-end;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
+    width: 100%;
 }
 .all-projects p:hover {
     color: var(--main-color);
@@ -196,7 +209,8 @@ article.donate-projects .all-projects a {
 }
 
 .button {
-    display: inline-block;
+display: flex;
+justify-content: center;
     padding: 0.35em 1.2em;
     border: 0.1em solid #FFFFFF;
     margin: 0 0.3em 0.3em 0;
@@ -239,23 +253,30 @@ article.follow-us {
 }
 
 input[type=email] {
-  width: 50%;
-  box-sizing: border-box;
-  border: 8px solid var(--main-color);
-  border-radius: 2px;
-  font-size: 16px;
-  background-color: white;
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  align-self: center;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border: 8px solid var(--main-color);
+    border-radius: 2px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 12px;
+    align-self: center;
+    justify-content: center;
+}
+
+article.donate-projects h2 span.header, article.follow-us h2 span.header{
+    color: var(--main-color);
 }
 
 button.send {
+    display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 footer {

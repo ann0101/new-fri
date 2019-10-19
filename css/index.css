@@ -30,7 +30,7 @@ header {
     align-items: flex-start;
     align-content: flex-start;
     min-height: 600px;
-    min-width: 400px;
+    min-width: 320px;
     color: var(--text-color);
     background-attachment:fixed;
     animation: grow 60s  linear 10ms infinite;
@@ -39,7 +39,6 @@ header {
 }
 
 .sides .fa{
-    text-decoration: none;
     color: var(--text-color);
     font-size: 50px;
     margin: auto;
@@ -49,10 +48,6 @@ header {
 /*Generated data*/
 article.generated-data-list{
     position: relative;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;*/
     color: var(--main-color);
     background-size: 100%;
     margin: 0;
@@ -100,6 +95,7 @@ article.generated-data-list p.generated-item{
     }
     .generated-data .branches{
         grid-area: 'branches';
+    }
 
 }
 
@@ -116,10 +112,7 @@ article.news {
 }
 
 article.news h2, article.news {
-    margin: 20px;
-    margin-bottom: 15px;
-    padding: 0;
-    align-items: flex-start;
+    align-items: center;
 }
 
 
@@ -128,8 +121,13 @@ article.news-block img, article.suport-projects img {
     width: 100%;
 }
 
+article.news-block h4, article.news-block p{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
 article.news .all-news a {
-    text-decoration: none;
     font-size: 24px;
     color: var(--main-color);
     justify-content: flex-end;
@@ -179,7 +177,6 @@ article.donate-projects {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    /*align-content: flex-start;*/
     margin: 0;
     padding: 0;
     position: relative;
@@ -196,10 +193,8 @@ article.suport-project img {
 .all-projects a {
     display: flex;
     justify-content: flex-end;
-    text-decoration: none;
     font-size: 24px;
     color: var(--text-color);
-    /*margin-right: 10px;*/
     width: 100%;
 }
 .all-projects p:hover {
@@ -209,8 +204,8 @@ article.suport-project img {
 }
 
 .button {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
     padding: 0.35em 1.2em;
     border: 0.1em solid #FFFFFF;
     margin: 0 0.3em 0.3em 0;
@@ -245,11 +240,25 @@ article.follow-us {
     align-items: center;
     align-content: center;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     position: relative;
     flex-direction: column;
     color: var(--text-color);
     background-size: 100%;
+}
+@media (max-width: 450px){
+    article.follow-us h2{
+        text-align: center;
+    }
+}
+.description{
+    text-align: center;
+}
+
+label.description-follow{
+    padding-bottom: 15px;
+    margin: 5px;
+    display: block;
 }
 
 input[type=email] {
@@ -262,7 +271,7 @@ input[type=email] {
     background-color: white;
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 12px;
+    padding: 12px 12px 12px 12px;
     align-self: center;
     justify-content: center;
 }
@@ -271,17 +280,14 @@ article.donate-projects h2 span.header, article.follow-us h2 span.header{
     color: var(--main-color);
 }
 
-button.send {
+
+.follow {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     margin-top: 10px;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 }
 
 h4 {
@@ -293,3 +299,38 @@ h4 {
 }
 
 /*Contacts*/
+footer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.contacts{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 15px;
+}
+
+.name-contact{
+    color:#aaa;
+    text-transform: uppercase;
+}
+
+.footer.logo{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: right;
+    padding: 15px;
+}
+
+.footer.logo img{
+    width: 150px;
+    height: auto;
+}
+
+.footer.logo p{
+    padding-right: 35px;
+}
+
+a {
+    text-decoration: none;
+}

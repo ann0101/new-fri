@@ -12,13 +12,14 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    max-width: 980px;
+    max-width: 1200px;
     margin: auto;
 }
 
 span.mark {
     background: var(--yellow-color);
     width: 100%;
+    padding: 0;
 }
 
 header {
@@ -37,14 +38,16 @@ header {
     transition:all 0.2s ease-in-out;
     z-index:-2;
 }
-
-.sides .fa{
-    color: var(--text-color);
-    font-size: 50px;
-    margin: auto;
-    position: absolute;
-    display: block;
+.header-navbar{
+    width: 980px;
 }
+
+header .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*Generated data*/
 article.generated-data-list{
     position: relative;
@@ -55,12 +58,14 @@ article.generated-data-list{
 }
 h2 {
     font-size: 35px;
+    padding: 15px;
 }
 h2.friNumbers{
     text-align: center;
 }
 .data-list {
     display: grid;
+    padding-bottom: 15px;
 }
 
 article.generated-data-list p.generated-number{
@@ -112,7 +117,7 @@ article.news {
 }
 
 article.news h2, article.news {
-    align-items: center;
+    align-items: flex-start;
 }
 
 
@@ -127,11 +132,11 @@ article.news-block h4, article.news-block p{
     text-align: justify;
 }
 
-article.news .all-news a {
+article.news .all-news p{
     font-size: 24px;
     color: var(--main-color);
     justify-content: flex-end;
-    margin-right: 10px;
+    padding-right: 10px;
 }
 
 .all-news p:hover {
@@ -139,6 +144,7 @@ article.news .all-news a {
     background-color: var(--yellow-color);
     cursor: pointer;
 }
+
 @media(min-width: 640px){
     .news-list{
         display: grid;
@@ -175,10 +181,6 @@ article.news .all-news a {
 article.donate-projects {
     background: url(../img/art-blueprint-brainstorming.jpg);
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    margin: 0;
-    padding: 0;
     position: relative;
     flex-direction: column;
     color: var(--text-color);
@@ -186,16 +188,25 @@ article.donate-projects {
     background-repeat: no-repeat;
 }
 
-article.suport-project img {
-    width: 100%;
+article.donate-projects p{
+    padding: 0 15px 0 15px;
+    text-align: justify;
 }
 
-.all-projects a {
-    display: flex;
+article.suport-project img {
+    width: 100%;
+    padding: 0 15px 0 15px;
+}
+
+article.donate-projects h4{
+    padding: 10px 0 0 15px;
+}
+
+article.donate-projects .all-projects p{
     justify-content: flex-end;
     font-size: 24px;
-    color: var(--text-color);
-    width: 100%;
+    color: var(--main-color);
+    padding: 10px 10px 0 0;
 }
 .all-projects p:hover {
     color: var(--main-color);

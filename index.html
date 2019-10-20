@@ -41,13 +41,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Блог</a>
                 </li>
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                     <form class="form-inline">
                         <div class="md-form my-0">
                             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                         </div>
                     </form>
-                </li>-->
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -63,7 +63,7 @@
         </nav>
         </div>
 <!--/.Navbar -->
-        <div class="info">
+        <div class="info-join">
             <h1>Зміни починаються з тебе</h1>
             <p class="about-fri"> ФРІ – потужний центр підтримки молодіжного руху, молодіжних організацій та підготовки молодих лідерів в Україні.
             Діємо з ме тою зміцнення молодіжного руху, навчання і забезпечення активних учасників об’єднань молоді,
@@ -140,40 +140,49 @@
 
     <article class="donate-projects">
         <h2><span class="header mark">Підтримай </span>нас</h2>
-        <p>Всеукраїнська молодіжна громадська організація “Фундація Регіональних Ініціатив” (ФРІ) – потужний
+        <p class="info donate">Всеукраїнська молодіжна громадська організація “Фундація Регіональних Ініціатив” (ФРІ) – потужний
         центр підтримки молодіжного руху, молодіжних організацій та підготовки молодих лідерів в Україні.
         Діємо з метою зміцнення молодіжного руху, навчання і забезпечення активних учасників об’єднань молоді,
         розвитку студентських та загалом молодіжних ініціатив.</p>
         <div class="suport-projects-list">
-            <article class="suport-project">
+            <article class="suport-project first">
                 <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
                 <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
                 <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
                 Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
-                <button class="button suport-project">Підтримати проект</button>
+                <div class="bt suport-project">
+                    <button class="button">Підтримати проект</button>
+                </div>
             </article>
-            <article class="suport-project">
+            <article class="suport-project second">
                 <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
                 <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
                 <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
                 Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
-                <button class="button suport-project">Підтримати проект</button>
+                <div class="bt suport-project">
+                    <button class="button">Підтримати проект</button>
+                </div>
             </article>
-            <article class="suport-project">
+            <article class="suport-project third">
                 <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
                 <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
                 <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
                 Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
-                <button class="button suport-project">Підтримати проект</button>
+                <div class="bt suport-project">
+                    <button class="button">Підтримати проект</button>
+                </div>
             </article>
-            <article class="suport-project">
+            <article class="suport-project fourth">
                 <img src="img/news/dyadyk-softcamp.jpg" alt="Дмитро Дядик на таборі Soft Skills Camp">
                 <h4><span class="mark">ФРІ-табір «Крок до Лідерства» </span></h4>
                 <p>тут короткий влучний опис чому чаме мабуть підтримати цей проект.
                 Опис табору Опис описл лщі опщ ш ф аопш щф аоп пшоавщ шправ щ шпо вща </p>
-                <button class="button suport-project">Підтримати проект</button>
+                <div class="bt suport-project">
+                    <button class="button">Підтримати проект</button>
+                </div>
             </article>
         </div>
+
         <div class="all-projects">
             <a href="#">
                 <p>Всі проекти
@@ -185,13 +194,17 @@
     <article class="follow-us">
         <h2><span class="header mark">Підписатись </span>на новини</h2>
         <div class="description">
-            <label for="email" class="description-follow">
-                Підпишись на нас, щоб завжди бути в курсі найсвіжіших новин та найкращих можливостей
-            </label>
-            <input type="email" placeholder="Email" id="email" name="email" required>
-            <div class="follow">
-                <button class="button">Надіслати</button>
-            </div>
+            <form method="POST" action="https://formspree.io/anna.protsyk22@gmail.com">
+            <fieldset>
+                <label for="email" class="description-follow">
+                    Підпишись на нас, щоб завжди бути в курсі найсвіжіших новин та найкращих можливостей
+                </label>
+                <input type="email" placeholder="Email" id="email" name="email" required>
+                <div class="follow">
+                    <button class="button">Надіслати</button>
+                </div>
+            </fieldset>
+            </form>
         </div>
     </article>
 

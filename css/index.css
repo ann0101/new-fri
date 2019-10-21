@@ -30,13 +30,23 @@ header {
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
-    min-height: 600px;
+    min-height: 620px;
     min-width: 320px;
     color: var(--text-color);
     background-attachment:fixed;
     animation: grow 60s  linear 10ms infinite;
     transition:all 0.2s ease-in-out;
     z-index:-2;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+}
+form.form-inline {
+    justify-content: center;
 }
 
 header .info-join {
@@ -47,10 +57,22 @@ header .info-join p.about-fri{
     padding: 10px 100px 0 100px;
 }
 
+
 header .info-join button.button.join{
     display: inline-flex;
     justify-content: center;
-    margin: 0;
+    margin: 0 0 10px 0;
+
+}
+
+@media (max-width:500px){
+    header .info-join p.about-fri{
+        display: none;
+    }
+
+    header .info-join button.button.join{
+        margin-top: 80px;
+    }
 }
 
 /*Generated data*/
@@ -94,15 +116,15 @@ article.generated-data-list p.generated-item{
         grid-gap: 20px;
         grid-template-columns: repeat(4, 2fr);
         grid-template-areas:
-        'realised-projects new-candidates members branches';
+        'projects candidates members branches';
 
     }
 
     .generated-data .realised-projects{
-    grid-area: 'realised-projects';
+    grid-area: 'projects';
     }
     .generated-data .new-candidates{
-        grid-area: 'new-candidates';
+        grid-area: 'candidates';
     }
     .generated-data .members{
         grid-area: 'members';
@@ -142,19 +164,22 @@ article.news-block h4, article.news-block p{
     color:var(--main-color);
 }
 
-article.news .all-news p{
-    font-size: 24px;
-    color: var(--main-color);
-    justify-content: flex-end;
-    padding-right: 10px;
+.all-news{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.all-news p:hover {
-    display: inline-flex;
+article.news .all-news span.all-news-p{
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+.all-news span.all-news-p:hover {
     color: var(--main-color);
     background-color: var(--yellow-color);
-    cursor: pointer;
 }
+
 
 @media(min-width: 640px){
     .news-list{
@@ -188,18 +213,21 @@ article.news .all-news p{
         width: 100%;
     }
 
+    article.news .all-news span.all-news-p{
+        padding-right: 10px;
+    }
+
 }
 
 /*Donate mobile*/
-@media (max-width:640px){
-    article.donate-projects h4{
+@media (max-width:640px) and (min-width:320px){
+    article.donate-projects h4.title-suport-project{
         font-size: 16px;
     }
 
-    article.suport-project.second, article.suport-project.third, article.suport-project.fourth{
+    article.donate-projects p, article.suport-project.second, article.suport-project.third, article.suport-project.fourth{
         display: none;
     }
-
 }
 
 /*Donate iPad*/
@@ -244,25 +272,33 @@ article.donate-projects h4{
     justify-content: center;
 }
 
-article.donate-projects .all-projects p{
+.all-projects{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+article.donate-projects .all-projects span.all-projects-p{
     font-size: 24px;
     color: var(--text-color);
-    padding: 10px 10px 0 0;
-    display: flex;
-    justify-content: flex-end;
 }
 
-article.donate-projects .all-projects i{
-    display: flex;
-    align-items: center;
-    padding-left: 5px;
-}
-
-article.donate-projects .all-projects p:hover {
-    display: inline-flex;
+span.all-projects span.all-projects-p:hover {
     color: var(--main-color);
     background-color: var(--yellow-color);
-    cursor: pointer;
+}
+
+@media(min-width: 980px){
+    .all-projects{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    article.projects .all-projects span.all-projects-p{
+        padding-right: 10px;
+    }
+
 }
 
 .button {

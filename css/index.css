@@ -49,6 +49,10 @@ form.form-inline {
     justify-content: center;
 }
 
+.form-inline .form-control {
+    background: transparent;
+}
+
 header .info-join {
     text-align: center;
 }
